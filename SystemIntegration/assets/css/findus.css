@@ -1,0 +1,84 @@
+ /* Reset & base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fb;
+      font-family: 'Segoe UI', sans-serif;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Fixed Top Bar */
+    .top_bar10 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(130, 147, 251, 1);
+      color: white;
+      padding: 10px 20px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid white;
+      height: px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .top_bar_logo10 img {
+      height: 150px;
+      display: block;
+    }
+
+    .Track10 {
+      margin-right: 20px;
+      font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* Main iframe container below the fixed top bar */
+    .iframe-container {
+  margin: 140px auto 100px; /* top auto bottom */
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 500px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-top: 120px;
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
+      .top_bar10 {
+        display: flex;
+        height: 100px;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .top_bar_logo10 img {
+        height: 120px;
+      }
+
+      .iframe-container iframe {
+        height: 300px;
+        margin-top: 20px;
+      }
+
+      .description {
+        font-size: 16px;
+        margin-bottom: 120px;
+      }
+    }

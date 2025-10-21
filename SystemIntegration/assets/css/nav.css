@@ -1,0 +1,89 @@
+/* Top Bar  */
+.top_bar {
+  background-color: rgba(130, 147, 251, 1);
+  color: white;
+  padding: 0px 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+  align-items: flex-end;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+.back{
+ background: rgba(130, 147, 251, 1);
+}
+
+.top_bar_logo {
+  display: flex;
+  align-items: flex-end; /* sticks logo to bottom */
+  height: 100%;
+  margin-left: -50px;
+}
+
+.top_bar_logo img {
+  height: 120px; /* adjust to fit nicely with the bottom border */
+  object-fit: contain;
+}
+
+.top_bar_links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.top_bar_links a {
+  color: white;
+  text-decoration: none;
+  -webkit-text-stroke: 0.2px yellow; /* border thickness + color */
+}
+
+.top_bar_links a:hover {
+  text-decoration: underline;
+}
+
+.logo-button img {
+  height: 45px;
+  vertical-align: middle;      
+}
+/* Top Bar  */
+
+/* Bell Notif ///////////////////////////////////////////////// */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    right: 0; 
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    -webkit-text-stroke: 0.2px white; /* border thickness + color */
+}
+
+/* Change link color on hover */
+.dropdown-content a:hover {
+    background-color: lightgray;
+    text-decoration: none;
+}
+
+/* This class is added by JavaScript to show the menu */
+.dropdown-content.show {
+    display: block;
+}
