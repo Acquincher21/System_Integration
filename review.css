@@ -1,0 +1,325 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none; /* Start hidden */
+  z-index: 1000;
+}
+
+/* 🔹 When active */
+.overlay.active {
+  display: block;
+}
+
+/* 🔹 Right-side sliding drawer panel */
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px; /* or 20vw if you want it responsive */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 30px 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: auto !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+  line-height: 1;
+  display: block;
+}
+
+/* Login content */
+.login-container {
+  color: white;
+  margin-top: 60px;
+  
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.login-button:hover {
+  background-color: #43a047;
+}
+
+
+
+
+/*
+ * 1. DESIGN VARIABLES
+ * Defines the color palette, spacing, and font for consistency.
+ */
+:root {
+    --color-primary: #8293fb;        /* Light Purple/Blue - Main action color */
+    --color-primary-dark: #6a7fec;   /* Darker Primary - for hover states */
+    --color-secondary: #6c757d;      /* Dark Gray - for secondary text */
+    --color-background: #f4f6f9;     /* Very Light Gray - Page background */
+    --color-card-bg: #ffffff;        /* White - Card background */
+    --color-border: #dee2e6;         /* Light Border Gray */
+    --color-success: #28a745;        /* Green - for confirm button */
+    --color-heading: #343a40;        /* Darkest Gray - Headings */
+    --font-family-sans: 'Roboto', sans-serif;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --max-width-content: 550px;      /* Max width for the centered card */
+}
+
+/*
+ * 2. GLOBAL RESET & BASE STYLES
+ */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    background-color: var(--color-background);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+    /* Enables page-wrapper to handle full height layout */
+    display: flex;
+    flex-direction: column; 
+}
+
+/*
+ * 3. LAYOUT & CENTERING
+ */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures it covers the whole screen height */
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width-content);
+    
+    /* KEY TO CENTERING HORIZONTALLY */
+    margin: var(--spacing-lg) auto; 
+    
+    padding: 0 var(--spacing-md);
+    flex-grow: 1; /* Allows container to push the footer down */
+}
+
+/*
+ * 4. HEADER/NAV STYLES (Matching your provided top_bar6)
+ */
+.top_bar6 {
+    background-color: var(--color-primary); /* Uses the primary color variable */
+    color: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_bar_logo6 img {
+    height: 50px; /* Adjusted size for better integration */
+    width: auto;
+    display: block;
+}
+
+.myRate6 h1 {
+    font-size: 1.8rem; /* Adjusted for a standard nav size */
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+}
+
+/*
+ * 5. CARD AND CONTENT STYLES
+ */
+.card {
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Subtle 3D lift */
+    padding: var(--spacing-lg);
+}
+
+.ratetitle {
+    font-size: 1.75rem;
+    color: var(--color-heading);
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary); /* Use primary color for section breaks */
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px dashed var(--color-border);
+}
+
+/* Detail Groups (The heart of the review data) */
+.detail-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px dotted #e9ecef;
+}
+
+.detail-row:last-of-type {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 500;
+    color: var(--color-secondary);
+    flex-shrink: 0; /* Prevents label from shrinking */
+    padding-right: var(--spacing-md);
+}
+
+.value {
+    font-weight: 700;
+    color: var(--color-heading);
+    text-align: right;
+    word-break: break-word; /* Important for long emails/file names */
+}
+
+/* Style for the multi-line Item Description (to override right alignment) */
+.detail-row p.value {
+    text-align: left;
+    font-weight: 400;
+    color: var(--color-secondary);
+}
+
+.type-tags {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-secondary);
+}
+
+/*
+ * 6. FORM & BUTTON STYLES
+ */
+.rate-summary {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.button {
+    width: 100%;
+    padding: 14px; /* Slightly larger padding */
+    margin-top: var(--spacing-md);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.primary-button {
+    background-color: var(--color-success); /* Use success color for confirmation */
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #1e7e34; /* Darker green for hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: var(--spacing-xs);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/*
+ * 7. MOBILE RESPONSIVENESS
+ */
+@media (max-width: 600px) {
+    .top_bar6 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-md);
+    }
+    
+    .top_bar_logo6 img {
+        height: 40px;
+    }
+
+    .myRate6 h1 {
+        font-size: 1.5rem;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .container {
+        margin: var(--spacing-md) auto;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    /* On small screens, allow value to wrap under the label for clarity */
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .label {
+        padding-right: 0;
+        margin-bottom: var(--spacing-xs);
+        border-bottom: 1px dashed var(--color-border);
+        width: 100%;
+    }
+
+    .value {
+        text-align: left; /* Force values to left-align below the label */
+        padding-left: 0;
+        font-size: 1rem;
+    }
+}

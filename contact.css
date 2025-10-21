@@ -1,0 +1,177 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none; /* Start hidden */
+  z-index: 1000;
+}
+
+/* 🔹 When active */
+.overlay.active {
+  display: block;
+}
+
+/* 🔹 Right-side sliding drawer panel */
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px; /* or 20vw if you want it responsive */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 30px 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Login content */
+.login-container {
+  color: white;
+  margin-top: 60px;
+  
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.login-button:hover {
+  background-color: #43a047;
+}
+
+
+/* end of overlay css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+  }
+  /* Contact Form */
+  .contact-form {
+    flex: 1;
+  }
+  .contact-form h2 {
+    margin-top: 0;
+    color: #4676d7;
+  }
+  .contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  .contact-form textarea {
+    min-height: 120px;
+  }
+  .contact-form button {
+    margin-top: 20px;
+    background-color: #4676d7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .contact-form button:hover {
+    background-color: #365abf;
+  }
+
+  /* Chat Sidebar */
+  .chat-sidebar {
+    flex: 1;
+    background: #e1e9ff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-sidebar h3 {
+    margin-top: 0;
+    color: #3455a4;
+  }
+  .chat-box {
+    flex-grow: 1;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+  }
+  .chat-input {
+    display: flex;
+    gap: 10px;
+  }
+  .chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1.5px solid #ccc;
+    font-size: 1rem;
+  }
+  .chat-input button {
+    background-color: #4676d7;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .chat-input button:hover {
+    background-color: #365abf;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+      gap: 25px;
+    }
+  }

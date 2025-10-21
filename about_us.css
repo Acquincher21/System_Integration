@@ -1,0 +1,532 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none; /* Start hidden */
+  z-index: 1000;
+}
+
+/* 🔹 When active */
+.overlay.active {
+  display: block;
+}
+
+/* 🔹 Right-side sliding drawer panel */
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px; /* or 20vw if you want it responsive */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 30px 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Login content */
+.login-container {
+  color: white;
+  margin-top: 60px;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.login-button:hover {
+  background-color: #43a047;
+}
+
+
+
+.top_bar {
+  background-color: rgba(130, 147, 251, 1);
+  color: white;
+  padding: 0px 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+  align-items: flex-end;
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+.top_bar_logo {
+  display: flex;
+  align-items: flex-end; /* sticks logo to bottom */
+  height: 100%;
+  margin-left: -50px;
+}
+
+.top_bar_logo img {
+  height: 120px; /* adjust to fit nicely with the bottom border */
+  object-fit: contain;
+}
+
+.top_bar_links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.top_bar_links a {
+  color: white;
+  text-decoration: none;
+  -webkit-text-stroke: 0.2px yellow; /* border thickness + color */
+}
+
+.top_bar_links a:hover {
+  text-decoration: underline;
+}
+
+.logo-button img {
+  height: 45px;
+  vertical-align: middle;      
+}
+/*remove after implementng to php and change */
+
+body{
+    background-color: rgba(130, 147, 251, 1);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.who {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    background-color: white;
+    height: 580px;
+}
+
+.text {
+    padding-left: 350px; /* Adjust as needed */
+    justify-content: flex-start;
+    margin-right: 50px;
+    max-width: 380px;
+}
+
+.text h1{
+    font-size: 55px;
+}
+
+.text p{
+    font-size: 24px;
+}
+
+.image-container {
+    flex: 1; /* Take up the remaining space */
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden; /* Hide overflow if image exceeds container */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Crop the image nicely if needed */
+    max-height: 500px; /* Optional: control how tall it gets */
+}
+
+.more {
+  display: flex;
+  flex-direction: column; /* Stack title and image row vertically */
+  align-items: center;    /* Center content horizontally */
+  gap: 1rem;
+  background-color: rgb(238, 240, 255);
+}
+
+.more h1 {
+  font-size: 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 10rem; /* space between images */
+  flex-wrap: wrap; /* optional: wraps images if screen is small */
+  justify-content: center;
+}
+
+.container img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.container p{
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.circle-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #8293FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.circle-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Our Story */
+
+.ourStory{
+    display: flex;
+    padding: 0;
+    align-items: center;
+    background-color: white;
+    height: 580px;
+    padding-left: 300px;
+    line-height: 30px;
+}
+
+.text_OurStory {
+    max-width: 540px;
+    margin-left: 40px;
+}
+
+.text_OurStory h1{
+    font-size: 38px;
+}
+
+.text_OurStory p{
+    font-size: 24px;
+}
+
+.ourStory_container {
+    display: flex;
+    justify-content: center;
+}
+
+.ourStory_container img {
+    width: 650px;
+    height: 490px;
+    object-fit: cover;
+}
+
+
+.learnMore{
+  font-weight: bold;
+  border: 1px solid;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
+
+.learnMore:hover{
+  background-color: rgba(130, 147, 251, 1);
+  color: white;
+}
+
+/* Powered By sustainability*/
+
+.sustainability{
+    display: flex;
+    padding: 0;
+    align-items: center;
+    background-color: white;
+    height: 580px;
+    padding-left: 300px;
+    margin-top: -55px;
+    line-height: 30px;
+}
+
+.text_sustainability {
+    max-width: 558px;
+    margin-left: 40px;
+}
+
+.text_sustainability h1{
+    font-size: 38px;
+}
+
+.text_sustainability p{
+    font-size: 24px;
+}
+
+.sustainability_container {
+    display: flex;
+    justify-content: center;
+}
+
+.sustainability img {
+    width: 650px;
+    height: 490px;
+    margin-left: 52px;
+    object-fit: cover;
+}
+
+.newsletter{
+  background-color: beige;
+  margin: 0;
+  padding: 2px;
+  padding-left: 300px;
+}
+
+.newsletter h1{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.newsletter p{
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.form-container {
+    background-color: rgb(238, 240, 255);
+    padding: 30px 40px;
+    padding-left: 320px;
+    padding-right: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    margin: 0;
+    justify-content: center;
+}
+
+/* Input field styles */
+.input-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-field input,
+.input-field select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 12px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f7f7f7;
+}
+
+.input-field select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="%23888" d="M7 9l3 3 3-3z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+    outline: none;
+    border-color: #66afe9;
+    background-color: #fff;
+}
+
+.required {
+    color: #ff4500;
+    margin-left: 2px;
+}
+
+/* Privacy text and button styles */
+.privacy-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.subscribe-btn {
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.subscribe-btn:hover {
+    background-color: #ff6347;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1600px) {
+  .top_bar {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .top_bar_logo {
+    margin-left: -30px;
+  }
+
+
+  .text_sustainability{
+    margin-left: -2px;
+  }
+
+  .ourStory, .sustainability {
+    padding-left: 150px;
+  }
+
+  .newsletter {
+    padding-left: 100px;
+  }
+
+  .form-container {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .ourStory_container img,
+  .sustainability_container img {
+    width: 600px;
+    height: 450px;
+    
+  }
+
+  .sustainability_container img {
+    width: 600px;
+    height: 450px;
+    
+    
+  }
+}
+
+@media (max-width: 900px) {
+  .top_bar {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .aboutusMain{
+    margin-top: 20px;
+  }
+  
+  .who, .ourStory, .sustainability {
+    flex-direction: column;
+    height: 800px; /* allow height to grow */
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-top: -10px;
+    
+  }
+
+  .text, .text_OurStory, .text_sustainability {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center;
+  }
+
+  .text h1, .text_OurStory h1, .text_sustainability h1 {
+    font-size: 28px;
+  }
+
+  .text p, .text_OurStory p, .text_sustainability p {
+    font-size: 16px;
+  }
+
+  .image-container, .ourStory_container, .sustainability_container {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    margin-left: 0 !important;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .image-container img, .ourStory_container img, .sustainability_container img {
+    width: 90%;
+    height: auto;
+    max-height: none;
+  }
+
+  .more .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container p {
+    margin-left: 0;
+  }
+
+  .form-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .newsletter {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    text-align: center;
+  }
+}

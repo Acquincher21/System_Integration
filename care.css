@@ -1,0 +1,152 @@
+.top_bar4 {
+    background-color: rgba(130, 147, 251, 1);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    flex-wrap: wrap;
+  }
+
+  .top_bar_logo4 img {
+    height: 180px;
+    display: block;
+  }
+
+  .CustomerCare {
+    margin-right: 20px;
+    font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    text-align: right;
+  }
+
+  .cre {
+    margin-left: 0;
+  }
+
+  body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+  }
+
+  .contact-main4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  background-color: #fff;
+  padding: 20px;
+  flex-wrap: nowrap; /* prevent wrapping */
+  padding-bottom: 120px;
+}
+
+.contact-container4 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  width: 60%;       /* Take ~60% width */
+  padding: 20px;
+  margin: 0;        /* Remove margin auto */
+}
+
+  .contact1 {
+    background: #fff;
+    border: 1px solid rgb(17, 0, 255);
+    padding: 10px 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(43, 42, 42, 0.2);
+    transition: transform 0.2s ease;
+  }
+
+  .contact1:hover {
+    transform: scale(1.02);
+  }
+
+  .contact-container4 a {
+    text-decoration: none;
+    color: blue;
+    font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .contact1 img {
+    max-width: 40px;
+    max-height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .text p {
+    margin: 0;
+    color: black;
+  }
+
+  .worker4 {
+  width: 35%;       /* Take ~35% width */
+  margin: 0;        /* Remove margin auto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.worker4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional for style */
+}
+
+  .footer4 {
+    text-align: center;
+  }
+
+  /* ✅ Responsive Styles */
+  @media (max-width: 768px) {
+    .top_bar4 {
+      display: flex;
+      text-align: center;
+      padding: 15px 10px;
+    }
+
+    .top_bar_logo4 img {
+      height: 120px;
+    }
+
+    .CustomerCare {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .contact-main4 {
+    flex-direction: column;
+    flex-wrap: nowrap; /* or allow wrap */
+    align-items: center;
+    padding-bottom: 120px;
+  }
+
+    .contact-container4, .worker4 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .worker4 {
+    display: none;
+  }
+
+    .contact1 {
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    .contact1 img {
+      margin-right: 10px;
+    }
+
+  }

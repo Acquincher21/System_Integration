@@ -1,0 +1,209 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none; /* Start hidden */
+  z-index: 1000;
+}
+
+/* 🔹 When active */
+.overlay.active {
+  display: block;
+}
+
+/* 🔹 Right-side sliding drawer panel */
+.overlay-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px; /* or 20vw if you want it responsive */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 30px 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Login content */
+.login-container {
+  color: white;
+  margin-top: 60px;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.login-button:hover {
+  background-color: #43a047;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Nav and footer full width */
+nav, footer {
+  width: 100%;
+}
+
+/* Center just the card */
+.card {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 90vw;
+  text-align: center;
+
+  /* Center horizontally */
+  margin: 2rem auto; /* auto left/right margins center it */
+}
+
+/* Card title */
+.card h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Motivational text */
+.card .motivation {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+/* Form inputs and select */
+.card form input[type="text"],
+.card form input[type="email"],
+.card form input[type="password"],
+.card form input[type="date"],
+.card form input[type="tel"],
+.card form select {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus state for inputs */
+.card form input:focus,
+.card form select:focus {
+  outline: none;
+  border-color: #27ae60; /* green highlight */
+  box-shadow: 0 0 5px rgba(39, 174, 96, 0.4);
+}
+
+/* Submit button */
+.card form button {
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card form button:hover {
+  background-color: #219150;
+}
+
+/* Social icons container */
+.card .social {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* Social icons styling */
+.card .social a img {
+  width: 36px;
+  height: 36px;
+  filter: grayscale(0.2);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.card .social a img:hover {
+  filter: none;
+}
+
+.success-message {
+  text-align: center;
+  padding: 30px;
+  background-color: #e6ffee;
+  border: 2px solid #00cc66;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 50px auto;
+  margin-bottom: 100px;
+}
+
+.success-message h2 {
+  color: #2e8b57;
+}
+
+.success-message button {
+  background-color: #00cc66;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.success-message button:hover {
+  background-color: #00994d;
+}
+
+footer{
+  margin-top: 230px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+  .card {
+    padding: 2rem 1.5rem;
+    width: 90vw;
+  }
+}
