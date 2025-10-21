@@ -43,7 +43,7 @@ $type = $_GET['type'] ?? '';
   <title> Ewaste Express </title>
 
 
-  <link rel = "stylesheet" href = "homepage.css"/>
+  <link rel = "stylesheet" href = "System_Integration/homepage.css"/>
 </head>
 
 
@@ -57,7 +57,7 @@ $type = $_GET['type'] ?? '';
     <div class = "sep">
      <h2 class = "user"> Welcome, <?php echo htmlspecialchars($username); ?> </h2>
         <div class ="sep2">
-          <img src = "images/user.png" alt = "User Profile">
+          <img src = "System_Integration/user.png" alt = "User Profile">
           <div class = "profile-info">
             <p> <?php echo htmlspecialchars("$firstname $lastname"); ?> </p>
             <p> Account Number: <?php echo htmlspecialchars($accnumber); ?> </p>
@@ -79,7 +79,7 @@ $type = $_GET['type'] ?? '';
   <div class = "gallery-container"> 
       <a href="workouts.php">
   <div class="gallery">
-    <img src="images/workout.png" alt="Workout API">
+    <img src="System_Integration/workout.png" alt="Workout API">
     <div class="text">
       <p>Workout</p>
       <p>& Exercises</p>
@@ -96,7 +96,7 @@ $type = $_GET['type'] ?? '';
 
 <div class = "services">
   <div class = "side">
-    <img src = "services.jpg">
+    <img src = "System_Integration/services.jpg">
     <div class ="offers" >
       <h2> Services Offered </h2>
       <p> Responsible Disposal, Rewarding Returns. Your E-Waste Solution. </p>
@@ -108,7 +108,7 @@ $type = $_GET['type'] ?? '';
 
   <div class = "ourStory1">
     <div class = "ourStory_container1">
-      <img src = "story.jpg">
+      <img src = "System_Integration/story.jpg">
     </div>
     <div class= "text_OurStory1">
       <h1> At-home pickup </h1>
@@ -124,13 +124,13 @@ $type = $_GET['type'] ?? '';
       <div class= "learnMore1"> <h7> Schedule Now </h7> </div>
     </div>
     <div class = "sustainability_container1">
-      <img src = "sustainability.jpg">
+      <img src = "System_Integration/sustainability.jpg">
     </div>
   </div>
 
   <div class = "ourStory2">
     <div class = "ourStory_container2">
-      <img src = "story.jpg">
+      <img src = "System_Integration/story.jpg">
     </div>
     <div class= "text_OurStory2">
       <h1> Donation Program </h1>
@@ -142,9 +142,10 @@ $type = $_GET['type'] ?? '';
 
 <?php require "views/footer.php"; ?>
 
-<script src="homepage.js"></script>
-<script src="nav.js"></script>
+<script src="System_Integration/homepage.js"></script>
+<script src="System_Integration/nav.js"></script>
 </body>
 
 
 </html>
+
